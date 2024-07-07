@@ -2,33 +2,33 @@
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.sfturing.dao.HospitalDao">
+<mapper namespace="com.example.hospital_se.dao.HospitalDao">
 	<!--通过ID查询医院 -->
-	<select id="findHosById" resultType="cn.sfturing.entity.Hospital"
+	<select id="findHosById" resultType="com.example.hospital_se.entity.Hospital"
 		parameterType="int">
 		SELECT * FROM `hospital`
 		WHERE id = #{id}
 	</select>
 	<!--通过医院名称查询医院 -->
-	<select id="findHosByName" resultType="cn.sfturing.entity.Hospital"
+	<select id="findHosByName" resultType="com.example.hospital_se.entity.Hospital"
 		parameterType="java.lang.String">
 		SELECT * FROM `hospital`
 		WHERE hospital_name =
 		#{hospitalName} limit 0,1
 	</select>
 	<!-- 查询开通预约挂号的医院 -->
-	<select id="findOpenHos" resultType="cn.sfturing.entity.Hospital">
+	<select id="findOpenHos" resultType="com.example.hospital_se.entity.Hospital">
 		SELECT * FROM `hospital`
 		WHERE is_open = 1
 	</select>
 	<!-- 推荐9个开通预约挂号的医院 -->
-	<select id="findHosByRe" resultType="cn.sfturing.entity.Hospital">
+	<select id="findHosByRe" resultType="com.example.hospital_se.entity.Hospital">
 		SELECT * FROM `hospital`
 		WHERE is_open = 1 ORDER BY
 		RAND() limit 19,16
 	</select>
 	<!-- 查询全部支持预约医院的数量 -->
-	<select id="findOrderHosNum" resultType="java.lang.Integer" parameterType="cn.sfturing.entity.Hospital">
+	<select id="findOrderHosNum" resultType="java.lang.Integer" parameterType="com.example.hospital_se.entity.Hospital">
 		SELECT count(*) FROM
 		`hospital`
 		where is_open = 1 
@@ -53,7 +53,7 @@
 
 	</select>
 	<!-- 查询全部支持预约医院 -->
-	<select id="findOrderHos" resultType="cn.sfturing.entity.Hospital" >
+	<select id="findOrderHos" resultType="com.example.hospital_se.entity.Hospital" >
 		SELECT * FROM `hospital`
 		WHERE is_open = 1 limit #{start},#{size}
 	</select>
@@ -81,7 +81,7 @@
 	</select>
 
 	<!--根据条件查询已开通预约的医院 -->
-	<select id="findHosByCondition" resultType="cn.sfturing.entity.Hospital" parameterType="cn.sfturing.entity.Hospital">
+	<select id="findHosByCondition" resultType="com.example.hospital_se.entity.Hospital" parameterType="com.example.hospital_se.entity.Hospital">
 		SELECT * FROM `hospital`
 		WHERE is_open=1 
 		<if test="hospitalArea != null">
@@ -109,7 +109,7 @@
 	</select>
 	
 	<!-- 查询全部支持预约医院的数量 -->
-	<select id="findAllHosNum" resultType="java.lang.Integer" parameterType="cn.sfturing.entity.Hospital">
+	<select id="findAllHosNum" resultType="java.lang.Integer" parameterType="com.example.hospital_se.entity.Hospital">
 		SELECT count(*) FROM
 		`hospital`
 		where 1 = 1 
@@ -135,7 +135,7 @@
 	</select>
 	
 	<!--根据条件查询已开通预约的医院 -->
-	<select id="findAllHosByCondition" resultType="cn.sfturing.entity.Hospital" parameterType="cn.sfturing.entity.Hospital">
+	<select id="findAllHosByCondition" resultType="com.example.hospital_se.entity.Hospital" parameterType="com.example.hospital_se.entity.Hospital">
 		SELECT * FROM `hospital`
 		WHERE 1=1 
 		<if test="hospitalArea != null">
@@ -163,7 +163,7 @@
 	</select>
 	
 	<!--查询用户收藏医院 -->
-	<select id="findFavHos" resultType="cn.sfturing.entity.Hospital">
+	<select id="findFavHos" resultType="com.example.hospital_se.entity.Hospital">
 		SELECT *
 		FROM `hospital`
 		WHERE 1=1 AND id in

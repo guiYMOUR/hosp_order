@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.sfturing.dao.NoticeDao">
+<mapper namespace="com.example.hospital_se.dao.NoticeDao">
 	<!-- 查询通知 -->
-	<select id="findNoticeByType" resultType="cn.sfturing.entity.Notice">
+	<select id="findNoticeByType" resultType="com.example.hospital_se.entity.Notice">
 		SELECT
 		* FROM `notice`
 		where is_useful = 1 limit #{start},#{size}
@@ -17,7 +17,7 @@
 		where is_useful = 1
 	</select>
 	<!-- 查询通知 -->
-	<select id="findNoticeById" resultType="cn.sfturing.entity.Notice">
+	<select id="findNoticeById" resultType="com.example.hospital_se.entity.Notice">
 		SELECT
 		* FROM `notice`
 		where id = #{id}
