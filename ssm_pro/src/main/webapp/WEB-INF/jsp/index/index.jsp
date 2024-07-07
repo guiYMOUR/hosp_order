@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>天津市医院预约挂号</title>
+<title>医院预约挂号</title>
 <%
 	/********** 保存网站的基本路径 ***********/
 	String path = request.getContextPath();
@@ -39,12 +39,13 @@
 								aria-hidden="true">×</button>
 						</div>
 						<h2>	
-							天津市医院挂号系统上线了
+							医院预约挂号系统上线了
 							</h1>
-							<p>为提高患者预约效率,改善患者预约体验,建立天津市预约挂号统一平台.</p>
+							<p>为提高患者预约效率,改善患者预约体验而建立预约挂号统一平台.</p>
 							<p>
 								<a class="btn btn-primary btn-lg" href="/ssm_pro/help/" >了解挂号系统</a>
 							</p>
+						</h2>
 					</div>
 
 				</div>
@@ -61,8 +62,8 @@
 					<div class="item">
 						<img alt="" src="${mybasePath}assets/img/1.jpg" />
 						<div class="carousel-caption">
-							<p>天津市挂号系统已上线</p>
-							<p>热烈庆祝挂号系统上线。</p>
+							<p>预约挂号系统已上线</p>
+							<p>可自行挂号预约</p>
 						</div>
 					</div>
 					<div class="item active">
