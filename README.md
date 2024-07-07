@@ -1,13 +1,8 @@
 # hosporder
 
-项目以做学习交流为目的。因为项目经验不足，项目可能会有很多潜在的问题，希望多多指教。如果觉得不错，请为它[STAR](https://github.com/sfturing/hosp_order/stargazers)！
+## 本项目仅作为学习和参考，不会且不允许其他如何人以商业为目的（包括但不限于出售）进行转载，永远尊重原作者的版权
 
-
-目前邮箱暂停注册完善服务，可自行更换邮箱发送,项目目前暂停更新，感谢大家支持。
-
-
-项目暂停维护。
-
+## [原项目地址](https://github.com/sfturing/hosp_order/stargazers)！
 
 
 
